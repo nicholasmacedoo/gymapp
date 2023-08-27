@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 
 export const Container = styled.View`
     flex: 1;
-    background: #121214;
+    background: ${(props) => props.theme.colors.black};
     position: relative;
 `
 
@@ -21,6 +21,23 @@ export const BackgroundImage = styled.Image`
 export const FilterWeek = styled.View`
     flex-direction: row;
     justify-content: space-between;
-    /* gap: 8px; */
     margin-top: 64px;
+`
+export const HeaderList = styled.View`
+    margin-top: 32px;
+    margin-bottom: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
+export const HeaderTitle = styled.Text`
+    font-size: 16px;
+    color: ${(props) => props.theme.colors.text};
+    font-family: ${(props) => props.theme.fonts.bold};
+
+`
+export const HeaderTotalExercises = styled.Text`
+    font-size: 16px;
+    color: ${(props) => props.theme.colors.label};
+    font-family: ${(props) => props.theme.fonts.regular};
 `

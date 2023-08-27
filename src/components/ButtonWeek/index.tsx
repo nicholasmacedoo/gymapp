@@ -1,9 +1,17 @@
+import { TouchableOpacityProps } from "react-native";
 import { Container, Title } from "./styles";
 
-export function ButtonWeek() {
+interface ButtonWeekProps extends TouchableOpacityProps {
+    title: string
+    isActive?: boolean
+}
+
+export function ButtonWeek({ title, isActive = false, ...rest }: ButtonWeekProps) {
     return (
-        <Container activeOpacity={0.8}>
-            <Title>seg</Title>
+        <Container activeOpacity={0.7} isActive={isActive} {...rest}>
+            <Title isActive={isActive}>
+                {title}
+            </Title>
         </Container>
     )
 }

@@ -4,11 +4,12 @@ export const Container = styled.View`
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    margin-top: 32px;
 `
 export const Avatar = styled.Image`
     height: 64px;
     width: 64px;
-    border-radius: 100%;
+    border-radius: 64px;
 `
 
 export const ContainerDescription = styled.View`
@@ -17,11 +18,12 @@ export const ContainerDescription = styled.View`
 
 export const Title = styled.Text`
     font-size: 16px;
-    color: #6D6D6D;
+    color: ${props => props.theme.colors.label};
+    font-family: ${props => props.theme.fonts.regular};
 `
 
 export const Username = styled.Text`
-    color: #E1E1E6;
+    color: ${props => props.theme.colors.text};
     font-size: 16px;
-    font-weight: bold;
+    font-family: ${props => props.theme.fonts.bold};
 `
